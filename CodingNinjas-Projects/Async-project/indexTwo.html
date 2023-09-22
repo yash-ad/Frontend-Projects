@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tea and Javascript</h1>
+    <button id="start" > Start   </button>
+    <button id="stop"  >  Stop   </button>
+</body>
+<script>
+
+    
+let intervalId;
+
+    
+    const sayDate = function(string)
+    {
+        console.log(string,Date.now());
+    };
+    
+//When the `start` button is clicked it triggers a function`sayDate`, to be called every second.
+
+ document.querySelector('#start').addEventListener('click',function(){
+    //Declared a variable to store the interval ID.
+    
+    intervalId = setInterval(sayDate,1000,"Hello Js");
+})
+
+
+//To stop the interval , when the `stop` button is clicked.
+document.querySelector('#stop').addEventListener('click',function(){
+    clearInterval(intervalId); 
+});
+
+
+//I have added a variable `intervalId` outside of any functions.
+//When the start button is clicked,it stores the interval ID returned by `setInterval` into intervalId.
+//Then when the `stop` button is clicked, it uses the 'clearInterval'  with `intervalId` Argument to stop the interval.
+
+</script>
+</html>

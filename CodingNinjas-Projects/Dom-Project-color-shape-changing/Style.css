@@ -1,0 +1,77 @@
+body{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKsjcG_tIYVfAkTjUoDFeXmwCRNXOqUUy2fA&usqp=CAU);
+background-size: cover;
+    display: flex;
+justify-content: center;
+align-items: center;
+align-content: center;
+height: 100vh;
+margin: 0;
+}
+
+#gameArea{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            border: 1px solid black;
+         
+   
+          
+
+}
+
+.shape{
+    height: 200px;
+    width: 200px;
+    /* margin-left: 20px; */
+    /* border-radius: 50%; */
+    padding: 0.5%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+   .square {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid black;
+
+}
+
+
+.Btn{
+  
+ 
+    cursor: pointer;
+  padding: 10px;
+  margin-right: 100px;
+  margin-top: 300px;
+ 
+    
+}
+.Btn:hover{
+
+    background-color: black;
+    color: antiquewhite;
+  
+}

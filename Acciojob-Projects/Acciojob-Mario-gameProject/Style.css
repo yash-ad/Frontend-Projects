@@ -1,0 +1,98 @@
+/* Body Section */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;   
+    background: #6b88fe; 
+   
+    margin: 0;
+    padding: 0;
+  }
+
+
+/* Front-page of the game with start button */
+  #start-btn {
+ /* Css layout :- Why position absolute because its positioned to the relative to the nearest positioned ancestor 
+ Respect to the parent position.  */
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #ff5252;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    /* CSS transitions allows you to change property values smoothly, over a given duration.
+    specifies a transition effect with a slow start, then fast, then end slowly (this is default) */
+  }
+
+  #start-btn:hover {
+    background: #ff8a80;
+  }
+
+
+/*Game container main page of the game */
+#game-container {
+    position: relative;  
+    /*An element with position: relative; is positioned relative to its normal position. */
+    /* Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.  */
+    height: 500px;
+    width: 900px;
+    background: url("./assets/background.png");
+    background-size: cover;
+    background-position: bottom;
+    background-position-y: -95px;
+    /* border: 3px solid #ffffff; */
+    border-bottom-width: 0px;
+    display: none;
+  }
+
+/* Scores */
+  #score {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #ffffff;
+  }
+  /* Mario gamer */
+  #mario {
+     /* Css layout :- Why position absolute because its positioned to the relative to the nearest positioned ancestor 
+ Respect to the parent position.  */
+    position: absolute;
+    bottom: 32px;
+    left: 50px;
+    height: 100px;
+    transition: all 0.2s;
+  }
+  
+/* Obstacles in the game */
+  .obstacle {
+    position: absolute;
+    bottom: 35px;
+    width: 60px;
+    transition: all 0.3s;
+    display: none;
+  }
+
+/*Mushroom enemy */
+  #mushroom {
+    width: 80px;
+    bottom: 10px;
+  }
+
+
+/*Mario flips his face whenever we press left arrow key in the game to flip his face */
+  .flipped {
+/* 
+    The transform property applies a 2D or 3D transformation to an element. 
+    This property allows you to rotate, scale, move, skew, etc., elements. */
+    transform: scaleX(-1);
+    transition: all 0s;
+  }

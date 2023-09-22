@@ -1,0 +1,739 @@
+*{
+
+    scroll-behavior: smooth;
+}
+
+
+body{
+
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 30px;
+   
+}
+.Container{
+
+    max-width: 1400px;
+    margin-inline: auto;
+   
+  
+  
+}
+
+/* Header */
+#body-header{
+    height: 65vh;
+    opacity: 0.8;
+    background-image: url(https://media.licdn.com/dms/image/D4D16AQGIbGG3B2CjdQ/profile-displaybackgroundimage-shrink_350_1400/0/1689950251606?e=1697673600&v=beta&t=U7JP6m5RLuQM4loReBazinyAtTWL-hmwZGQk9zS3pE8);
+    background-size:1050%;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 1.2rem;
+    overflow: hidden;
+}
+
+/* Nav */
+.Horizontal-List{
+    list-style: none;
+    padding-left: 9px;
+    margin: -48px;
+}
+
+#Menubar{
+    
+    margin-top: -10px;
+
+}
+.nav-hamburger{
+
+    display: none;
+ 
+  
+}
+    
+.Horizontal-List li{
+    
+    display: inline-block;
+    margin: 0px 20px 20px 0px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    letter-spacing: 0.5REM;
+    word-spacing: 10%;
+
+}
+
+.Horizontal-List li a{
+
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s ,border-bottom 4s;
+}
+
+.Horizontal-List li a:hover{
+
+    color: lightgrey;
+    border-bottom: 1px solid white;
+}
+
+.text-center{
+
+    text-align: center;
+}
+
+
+/*Name and Social Icons */
+
+
+.MyName{
+    
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    color: white;
+    font-weight: 500;
+margin-top: 11rem;
+    text-align: center;
+}
+#Social-Links-container{
+
+
+    margin-top: 16vh;
+}
+
+.Social-Icons li a i:hover {
+    box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+    
+   
+   
+}
+
+.Social-Icons li a i {
+ 
+    zoom: 120%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 50%;
+} 
+
+/*Main*/
+
+
+/*About Section*/
+
+#About{
+   
+    height: auto;
+    width: 100%;
+    position:relative;
+}
+
+#MyImage{
+ 
+    height: 15rem;
+    width: 15rem;
+    margin: auto;
+    margin-top: -16.5vh;
+    border-radius:50%;
+    margin-left:89vh ;
+    border-color: lightgrey;
+    box-shadow: 0px 0px 5px 5px white;
+   
+    
+}
+
+#MyImage img{ 
+    
+    /*Here the parent is Div of image tag we have set the unit relative to the parent is %*/
+    height: 100%;
+    width: 100%;
+
+    
+}
+/*About Section*/
+#About-Paragraph{
+
+    line-height: 60px;
+    font-size:80%;
+    color: grey;
+    font-weight: 400;
+    padding-top: 40px;
+    margin: 0px 70px 35px 70px;
+}
+
+
+.Highlighted{
+
+    color: #2857a4;
+}
+
+
+
+/* Section */
+
+section{
+
+    width: 100%;
+  
+  
+}
+
+
+ section:nth-child(2n){
+
+    background-color: #9e9b9b29;
+ }
+
+
+
+
+/* Skills Section */
+
+.Skills-heading{
+
+    width: auto;
+    padding: 20px 10px 10px;
+    font-weight: 400;
+    margin-bottom: 75px;
+  
+    
+}
+
+.Skills-heading span{
+
+    font-size: 40px;
+    color: #2857a4;
+
+padding-top:10px ;
+margin-right: 0.5rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+#Skills{
+   
+   padding-top: 10px;
+   padding-right: 30px;
+    padding-bottom: 100px;
+
+    margin-top: 90px;
+    margin-bottom: 100px
+
+}
+
+.Skills-Display{
+
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left:217px;
+}
+
+.skill-progress
+{
+width: 8rem;
+height: 1.9rem;
+background-color: lightgrey;
+border-radius:15rem;
+box-shadow: 1px 1px 2px 1px #b9b9b9 inset;
+overflow: hidden;
+
+}
+
+/*New css rule directly > apply to a child*/
+.skill-progress div
+{
+border-radius:25px 0px 0px 25px;
+
+
+}
+/*Skills color code*/
+.mb-blue{
+background-color: #2857a4;
+}
+.mb-orange{
+    background-color: orangered;
+}
+.mb-green{
+    background-color: green;
+}
+
+
+.skill-name 
+{
+font-weight: 300;
+font-size:1rem;
+vertical-align: middle;
+color: white;
+padding-top: 5%;
+padding-left: 15.5%;
+
+}
+
+/*Percentage classes*/
+.eighty-five-percent{
+    width: 85%;
+    height: inherit;
+
+}
+
+.seventy-Five-percent{
+    width: 75%;
+    height: inherit;
+
+}
+.seventy-percent{
+    width: 70%;
+    height: inherit;
+}
+
+
+
+/*Education-Section*/
+
+#Education{
+    
+    padding-right: 30px;
+    padding-bottom: 50px;
+
+
+}
+
+.Education-heading{
+
+   width: auto;
+   padding: 0px 10px 35px;
+   font-weight: 400;
+   margin-bottom: -5px;
+}
+
+
+
+.Education-heading span
+{
+   font-size: 40px;
+   color: #2857a4;
+
+margin-right: 0.5rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+
+}
+
+
+
+.Timeline{
+   position: relative;
+   width: 70%;
+  
+   left: 15%;
+   margin-bottom: 1%;
+}
+
+.Timeline-Box{
+
+   position: relative;
+   width: 40%;
+   margin: 5px;
+   min-height: 160px;
+   
+}
+
+.contentbox {
+   position: relative;
+   font-size: 1.3rem;
+   text-align: center;
+   padding-top: 60px;
+
+ 
+
+}
+
+.Timeline-Box:nth-child(2n){
+
+   left: 55%;
+}
+
+.Timeline-divider{
+
+   position: absolute; /*Position:absolute because it uses the document body, and moves along with page scrolling.*/
+  
+   height: 75%;
+   width: 0;
+   border: 3px dashed #0096fa6b;
+   top: 10%;
+   left: 50%;
+}
+
+.Timeline-traveller{
+position: sticky ;
+top: 50%;
+color: #2857a4;
+left: -20%;
+
+transform: rotate(90deg);
+z-index: 3;
+
+}
+
+h5{
+
+   color: orangered;
+   font-size: larger;
+   font-weight: 500;
+   font-size: 1.5rem;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: bold;
+   margin-top: 0px;
+   margin-bottom: 0px;
+}
+h6{
+
+   color:  #2857a4;
+   font-size: larger;
+   font-weight: 500;
+   font-size: 1rem;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: bold;
+   margin-top: 10px;
+   margin-bottom: 0px;
+}
+
+.contentbox p {
+
+   color: grey;
+   font-size:large;
+   font-weight: 200;
+   font-size: 1rem;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: bold;
+   line-height: 1.9;
+}
+
+
+/* Dots on a divider */
+
+.Timeline-Box:nth-child(1n)::after{
+    content: '';
+    position: absolute;
+    top: 30%;
+    right: -26%;
+   background-color: gray;
+   border-radius: 60%;
+   width: 0.8rem;
+   height: 0.8rem;
+   z-index: 1;
+}
+
+
+.Timeline-Box:nth-child(2n)::after{
+   content: '';
+   position: absolute;
+   top: 30%;
+   left: -15.1%;
+  background-color:gray;
+  border-radius:  60%;
+ 
+  width: 0.8rem;
+  height: 0.8rem;
+  z-index: 1;
+}
+
+
+
+/* Portfolio Section */
+
+#Portfolio{
+
+
+    padding-right: 30px;
+     padding-bottom: 20px;
+ 
+     margin-top: -100px; 
+}
+.portfolio-heading{
+    
+    width: auto;
+    padding: 50px 10px 0px;
+    font-weight: 400;
+    margin-bottom: -5px;
+    margin-top: 100px;
+
+}
+.portfolio-heading span{
+
+    font-size: 40px;
+    color: #2857a4;
+
+
+margin-right: 0.5rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+
+.Portfolio-Display{
+  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  
+    margin:70px 40px 0px;
+
+}
+.Portfolio-Images{
+    display: flex;
+    flex-direction: column ;
+    
+
+}
+.scroll-percentage {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    z-index: 1000;
+  }
+  
+.Portfolio-pic{
+ position: relative;
+    height: 15rem;
+    width: 20rem;
+    padding-bottom: 1rem;
+}
+
+  .Text-content {
+
+    width: 25%;
+    height: 25%;
+    position:absolute;
+background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+
+.Portfolio-pic:hover{
+
+background-color: lightgrey;
+box-shadow: 0px 0px 20px 15px rgba(67, 61, 244, 0.3);
+}
+
+
+/* Contact Section */
+/*Code for the Right section*/
+#Contact{
+
+    color: #fff;
+}
+.Contact-Container{
+width: 100%;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 5%;
+background: linear-gradient(263deg,rgb(48 37 81 / 96%),rgb(76 75 177));
+
+
+}
+
+.Contact-Container .row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+
+
+}
+span .png{
+
+    padding-right: 0;
+}
+
+.row div.col{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.row div.right{
+    display:flex;
+flex-basis: 60%;
+font-size: 20px;
+margin-left: 3.5%;
+
+
+}
+
+.Getintouch p {
+
+    font-size: 15px;
+    letter-spacing: 2px;
+
+    line-height: 1.9;
+    color: white;
+    margin-bottom: 5px;
+    overflow: auto;
+  
+}
+
+.row div.right .contactInfo{
+
+    margin-bottom: 15px;
+}
+
+.addressContainers span {
+    padding-right: 20px;
+
+ 
+ }
+
+ .addressContainers #address{
+
+    margin-bottom: 20px;
+ }
+
+ .addressContainers #contact-Number{
+    margin-bottom: 20px; 
+ }
+
+
+ .addressContainers #email{
+    margin-bottom: 20px; 
+
+ }
+
+
+
+
+
+
+.Contact-heading{
+    
+    width: auto;
+    padding: 0px 10px 10px;
+    font-weight: 400;
+    margin-bottom: 100px;
+    margin-top: 0;
+
+    
+   
+
+}
+
+.Contact-heading span{
+    font-size: 40px;
+    color: #fff;
+    display: flex;
+margin-right: 10rem;
+flex-direction: column;
+align-items: center;
+
+}
+
+/*Code for the left section*/
+.colleft .messageform .Input-fields .message{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+margin-top: 0;
+}
+.messageform{
+    flex-basis: 50%;
+}
+.colleft{
+    flex-basis:40%;
+    min-width: 320px;
+    margin-right: 208px;
+    font-size: 50px;
+
+
+}
+.colleft .Input-fields{
+
+    margin: 10px 0px;
+ 
+}
+
+.messageform input , .messageform textarea{
+
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    border: none;
+    padding: 30px 0px;
+    background-color:transparent;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    transition: 0.5s;
+   
+    
+}
+
+.messageform .messagebox .btn{
+     background-color:transparent;
+     color: #fff;
+     font-size: medium;
+     font-weight: 600;
+     word-spacing: 6%;
+     letter-spacing: 0.1rem;
+    }
+    
+    .messagebox .btn{
+        
+    border: 2px solid #fff;
+    padding: 15px 15px;
+    width: 50%;
+    height: 60%;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 10px;
+    
+    
+   
+  transition: 0.4s;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+.messagebox .btn:hover{
+
+    background-color: black;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid dodgerblue;
+}
+
+/*socialiconsfooter*/
+.socialiconsfooter .Horizontal-List{
+    list-style: none;
+   padding-right: 75px;
+    margin: 0px;
+}
+
+.socialiconsfooter .Horizontal-List li{
+    
+    display: inline-block;
+    margin: 0px 25px 25px 0px;
+    font-weight:600;
+    font-size: 1rem;
+    letter-spacing: 0.4REM;
+    word-spacing: 6%;
+
+}
+

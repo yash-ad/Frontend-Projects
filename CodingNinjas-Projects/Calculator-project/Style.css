@@ -1,0 +1,103 @@
+/* Universal selector*/
+/* Sets font family, margin, padding, and box-sizing for all elements on the page. This ensures a consistent look and behavior throughout the interface. */
+*
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    /*The box-sizing property allows us to include the padding and border in an element's total width and height. 
+    If you set box-sizing: border-box; on an element, padding and border are included in the width and height: Both divs are the same size now! Hooray! */
+}
+
+
+/* Body selector */
+/* Styles the overall appearance of the calculator container.
+It centers the container within the viewport and sets a background color. */
+body
+{
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #e0e3eb;
+}
+
+
+/* #calculator-container-selector */
+/* Styles the calculator container itself.
+It sets the background color, maximum width, border radius, box shadow, and padding. */
+#Calculator-container
+{
+    position: relative;
+    background-color: #fff;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow:  0  5px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px 20px 20px;
+}
+
+
+/* Calculator-screenDisplay */
+/* Styles the calculator display screen.
+It sets the height, width, text alignment, font size, margin, and color. 
+It also disables pointer events to prevent interactions with the display. */
+.screenDisplay
+{
+height: 90px;
+width: 100%;
+text-align: right;
+border: none;
+outline: none;
+font-size: 25px;
+margin-bottom: 10px;
+color:#000e1a;
+pointer-events: none;
+/* The pointer-events are triggered by touch, stylus, mouse click, and many more. */
+}
+
+
+/* calculator-Buttons */
+/* Styles the calculator buttons container using CSS grid. 
+It defines the layout using `grid-template-columns` and 
+sets the gap between buttons. */
+.Buttons
+{
+   display: grid;   /* For look like a calculator */
+   grid-template-columns:repeat(4,1fr) ;
+   grid-gap: 10px;   /*Gaps(space) between buttons */
+
+}
+
+
+/* In class Buttons is button to stylize the buttons */
+/* Styles the individual buttons within the buttons container. 
+It sets padding, border radius, border, cursor, font size, and background color. */
+.Buttons button
+{
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size:20px ;
+    background-color: #eee;
+}
+
+
+
+/* The :active selector is used to select and style the active link.
+A link becomes active when you click on it.
+Styles the appearance of a button when it's in an active (pressed) state. 
+It applies a slight scaling effect using the `transform` property.
+The :active selector can be used on all elements, not only links. */
+.Buttons button:active
+{
+transform: scale(0.99);
+}
+
+
+/* Operators for perform operations in between operands */
+.Operator{
+color:#2f9fff ;
+}
