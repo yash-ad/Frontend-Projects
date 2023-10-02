@@ -17,7 +17,8 @@ const results = document.querySelector('#results');
 if(height === "" || height < 0 || isNaN(height)){
 //InnerHtml for values
 results.innerHTML = `Please provide a valid input! ${height}`;
-}else if(weight === "" || weight < 0 || isNaN(weight)){
+}
+else if(weight === "" || weight < 0 || isNaN(weight)){
     results.innerHTML = `Please provide a valid input! ${weight}`;
 }
 else{
