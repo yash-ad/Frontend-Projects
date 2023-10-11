@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+#ball{
+position: absolute;
+ top: 100px; 
+ left: 100px; 
+ width: 80px; 
+ height: 80px; 
+ background-color: skyblue;
+border-radius: 50%;}
