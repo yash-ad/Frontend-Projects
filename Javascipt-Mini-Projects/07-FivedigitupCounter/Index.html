@@ -6,36 +6,38 @@
   </head>
   <body>
   <div id="counter-value">
-<!--This is a container div for the counter value section.
-Inside this div, you have a paragraph element that provides instructions to the user.
-It tells the user to enter a value between 1 and 9.
-Below the paragraph, there's another div that holds the input field and a button.-->
-      <p>Enter Value From 1 and 9</p>
+      <p>Enter Value From 1 and 99999</p>
       <div id="input-range">
-<!-- This is an input field of type "number."
-  It has an `id` attribute set to "number," 
-  which can be used to reference this input field in JavaScript. 
-  The `placeholder` attribute provides a hint to the user that they should enter a number.-->
         <input type="number" id="number" placeholder="Enter Number" />
-<!-- This is a button element that says "Start Counter" and "Reset Counter".
-  " It has an `onclick` attribute, 
-  which means when the button is clicked,
-  it will trigger a JavaScript function called `startCounter() and resetCounter()`-->
         <button onclick="startCounter()">Start Counter</button>
         <button onclick="resetCounter()">Reset Counter</button>
       </div>
       </div>
-<!--This is another container div,this time for the counter display section.
-  Inside this div, you have a single counter element that displays the current and next values. -->
     <div id="counter-container">
       <div class="counter" id="first">
-<!-- This paragraph element with the class "current" will be used to display the current value of the counter.-->
-        <p class="current">0</p>
-<!-- This paragraph element with the class "next" contains the initial next value of the counter, 
-  which is set to  -->     
         <p class="next">1</p>
       </div>
     </div>
+    <div id="counter-container">
+        <div class="counter" id="Second">
+          <p class="next">2</p>
+        </div>
+      </div>
+      <div id="counter-container">
+        <div class="counter" id="three">
+          <p class="next">3</p>
+        </div>
+      </div>
+      <div id="counter-container">
+        <div class="counter" id="four">
+          <p class="next">4</p>
+        </div>
+      </div>
+      <div id="counter-container">
+        <div class="counter" id="five">
+          <p class="next">5</p>
+        </div>
+      </div>
   </body>
   <script src="./Script.js"></script>
 </html>
