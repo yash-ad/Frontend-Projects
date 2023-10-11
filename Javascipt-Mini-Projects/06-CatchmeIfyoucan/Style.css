@@ -1,0 +1,16 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    background-color: #c21212;
+    position: absolute;
+    color: antiquewhite;
+}
