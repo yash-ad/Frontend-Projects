@@ -227,7 +227,7 @@ document.addEventListener('keydown',moveBall);
 ```
 ## Project Six:-
 
-## 6.CatchMeIfyyouCan (mouse pointer) -
+## 6.CatchMeIfYouCan (mouse pointer) -
 
 ## Code solution:-
 ```javascript
