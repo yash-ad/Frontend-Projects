@@ -32,6 +32,9 @@ if(event.target.id === 'blue'){
 if(event.target.id === 'yellow'){
     body.style.backgroundColor = event.target.id;
 }
+if(event.target.id === 'purple'){
+    body.style.backgroundColor = event.target.id;
+}
 })
 });
 /////////////////////////////////////////////////////////////////////////////////////////////

@@ -9,19 +9,26 @@
 <body>
     <div class="container">
   <form>
-    <p><label>Height in Cm :</label><input type="text" id="height"></p>
-    <p><label>Weight in Kg : </label><input type="text" id="weight"></p>
-<button>Calculate</button>
+    <p>
+      <label>Height in Cm :</label>
+      <input type="text" id="height" placeholder="Your height">
+    </p>
+    <p>
+      <label>Weight in Kg : </label>
+      <input type="text" id="weight"placeholder="Your weight">
+    </p>
+<button id="calculate">Calculate</button>
 <button id = "reset">Reset</button>
 <div id="results"></div>
 <div id="weight-guide">
     <h3>BMI Weight Guide</h3>
-    <p>Under Weight = Less than 18.6</p>
-    <p>Normal Range = 18.6 and 24.9</p>
-    <p>Overweight = Greater than 24.9</p>
+    <p id="underweight">Under Weight    = Less than 18.6</p>
+    <p id="healthyweight">Healthy Weight = 18.6 and 24.9</p>
+    <p id="overweight">OverWeight  = Greater than 24.9</p>
   </div>
   </form>
     </div>
 </body>
-<script src="./Script.js"></script>
+<!-- <script src="./Script.js"></script> -->
+<script src="./practice.js"></script>
 </html>
