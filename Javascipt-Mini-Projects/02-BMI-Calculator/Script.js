@@ -1,7 +1,8 @@
 //For selecting `form` element and stored in a variable `const form`:-
 const form = document.querySelector('form');
+
 //Addeventlistener, here the event listener is `submit` why because of a `form`.
-//And with the callBack function as a paramter(local variable) `event`.
+//And with the callBack function as a paramter(local variable) `event` as an object.
 form.addEventListener('submit',function(event){
 //preventDefault:- method is used to stop the default behavior of an element, 
  //as a form submission or a link click, from occurring.
@@ -11,7 +12,7 @@ event.preventDefault();
 //parseInt:- because the values will get into a string so `parseInt()` method convert them into the numbers.
 const height  = parseInt(document.querySelector('#height').value);
 const weight  = parseInt(document.querySelector('#weight').value);
-const results = document.querySelector('#results');
+const resultDisplay = document.querySelector('#results');
 
 //If-else if conditions to check the values for height and weight:-
 if(height === "" || height < 0 || isNaN(height)){
