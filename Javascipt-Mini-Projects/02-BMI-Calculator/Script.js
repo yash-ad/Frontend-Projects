@@ -24,10 +24,23 @@ else if(weight === "" || weight < 0 || isNaN(weight)){
 else{
 //The formula for BMI is weight in kilograms divided by height in meters squared.
 //toFixed() method for 2 decimal value.
-const bmi = (weight/((height*height)/10000)).toFixed(2);
+const bmiResult = (weight/((height*height)/10000)).toFixed(2);
 
-//To show the results:-
-results.innerHTML = `<span>Your Bmi is : ${bmi} </span>`;
+//For Bmi categories results:-
+let bmiCategory;
+   if(bmiResult < 18.6){
+    bmiCategory = "Under weight"
+   }
+   else if(bmiResult > 18.6 && bmiResult < 24.9){
+bmiCategory = "Healthy weight"
+   }
+  else{
+    bmiCategory = "Overweight"
+  }
+
+    //To show the result display
+resultDisplay.innerHTML = `<span> Based on your body mass index ${bmiResult}, you are within the ${bmiCategory} range.</span>`
+
 }
 });
 
