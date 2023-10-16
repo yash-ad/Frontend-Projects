@@ -3,21 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Style.css">
-    
-    <title>Digital Clock</title>
-    
+        body {
+          background-color: #212121;
+          color: #fff;
+        }
+        .center {
+          display: flex;
+          height: 100vh;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        #banner{
+          font-size: 40px;
+          font-family: 'Orbitron',sans-serif;
+          font-weight: bold;
+        }
+        #clock {
+          font-family: 'Orbitron';
+          font-size: 80px;
+          background-color: orange;
+          padding: 60px 150px;
+          margin-top: 10px;
+          border-radius: 20px;
+        }
+      </style>
+    <title>Digital Clock</title>  
 </head>
 <body>
-    <div class="Container">
     <div class="center">
-        <div id="heading">
-            <span>Digital Clock</span>
-        </div>
-    <div class="clock-display">
+        <div id="banner"><span>Your local time</span></div>
         <div id="clock"></div>
       </div>
-    </div>
 </body>
 <script src="./Script.js"></script>
 </html>
