@@ -1,12 +1,12 @@
 //First task is to generate a random number:-
 //`parseInt()` method to return as an integer , string into a number.
 
-const randomNumber = parseInt(Math.random()*100 + 1);
+let randomNumber = parseInt(Math.random()*100 + 1);
 const userInput = document.querySelector('#guessField');
 const submitButton = document.querySelector('#subt');
 const guessSlot = document.querySelector('.guesses');
 const remainingSlot = document.querySelector('.lastResult');
-const lowOrHighVal = document.querySelector('.lowOrHi');
+const toShowMessage = document.querySelector('.displaymsg');
 const resultOnParagraph  = document.querySelector('.resultParagraph');
 
 //To create paragraph:-
@@ -83,7 +83,7 @@ remainingSlot.innerHTML = `${11-numGuess}`
 
 //Interaction with DOM manipulation:-                                                                                                                               
 let displayMessage = (message)=>{
-lowOrHighVal.innerHTML = `<h2>${message}</h2>`
+toShowMessage.innerHTML = `<h2>${message}</h2>`
 };
 
 let endGame = ()=>{
@@ -92,7 +92,7 @@ let endGame = ()=>{
 userInput.value = "";
 userInput.setAttribute('disabled',"");
 createParagraph.classList.add('button');
-createParagraph.innerHTML = `<h2 id ="newGame">Start Game</h2>`;
+createParagraph.innerHTML = `<h2 id ="newgame">StartGame</h2>`;
 resultOnParagraph.appendChild(createParagraph); 
 playGame = false;   
 newGame();
@@ -100,15 +100,69 @@ newGame();
 
 
 let newGame = ()=>{
-const newGameButton = document.querySelector('#newGame');
+const newGameButton = document.querySelector('#newgame');
 newGameButton.addEventListener('click',function(){
     randomNumber = parseInt(Math.random()*100 + 1);
     prevGuess = [];
     numGuess = 1;
     guessSlot.innerHTML = "";
     remainingSlot.innerHTML = `${11-numGuess}`;
-    resultOnParagraph.removeAttribute('disabled');
-    resultOnParagraph.removeChild(createParagraph);
+    createParagraph.removeAttribute('disabled');
+    createParagraph.removeChild(resultOnParagraph);
     playGame = true;
 })
 };
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///.NOTES:-
+
+//1.Random Number Generation:-
+//let randomNumber = parseInt(Math.random()*100 + 1); 
+//generates a random number between 1 and 100 using Math.random(), and parseInt() converts it into an integer.
+
+//2.DOM Elements:
+//const userInput, submitButton, guessSlot,remainingSlot,
+//lowOrHighVal, and resultOnParagraph are variables that store references
+//to specific elements in the HTML document.
+
+//3.Creating Paragraph Elements:
+//const createParagraph = document.createElement('p'); 
+//creates a new paragraph element. 
+//This will be used to display messages in the game.
+
+//4.Array to Store Previous Guesses:
+//let prevGuess = []; 
+//initializes an empty array to store the user's previous guesses.
+
+//5.Number of Guesses:
+// let numGuess = 1; 
+//initializes a counter for the number of guesses the user has made.
+
+//6.Flag for Playing the Game:
+//let playGame = true; 
+//is a flag that indicates whether the game is in progress.
+
+//7.Event Listener for Submit Button:
+// submitButton.addEventListener('click', (event) => {...} listens for a click event on the submit button. When clicked, it triggers the game logic.
+
+//8.validateGuess Function:
+// This function checks if the user's guess is valid and within the specified range (1-100).
+
+//9.checkGuess Function:
+// Compares the user's guess to the random number and provides feedback on whether the guess is too high, too low, or correct.
+
+
+//10.displayGuess Function:
+// Updates the display to show the user's previous guesses and updates the remaining guesses count.
+
+//11.displayMessage Function:
+// Updates the display to show messages 
+//(e.g., "Number is too low", "Congratulations, You guessed it right number").
+
+//12.endGame Function:
+// Ends the game by disabling the input field, displaying a message, and providing an option to start a new game.
+
+//13.newGame Function:
+//Starts a new game by generating a new random number, resetting variables, and enabling the input field.

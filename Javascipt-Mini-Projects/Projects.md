@@ -149,138 +149,175 @@ clock.innerHTML = clockTime.toLocaleTimeString();
 
 ## Code solution:-
 ```javascript
-///.SELECTORS:-
+//First task is to generate a random number:-
+//`parseInt()` method to return as an integer , string into a number.
+
 let randomNumber = parseInt(Math.random()*100 + 1);
-const submitButton = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
+const submitButton = document.querySelector('#subt');
 const guessSlot = document.querySelector('.guesses');
 const remainingSlot = document.querySelector('.lastResult');
-const lowOrHighval = document.querySelector('.lowOrHi');
-const startOver = document.querySelector('.resultParagraph');
+const toShowMessage = document.querySelector('.displaymsg');
+const resultOnParagraph  = document.querySelector('.resultParagraph');
+
+//To create paragraph:-
 const createParagraph = document.createElement('p');
 
-let prevGuess = []; //Users value stored in an empty array(truthy):-
+//Values stored in an array:-
+let prevGuess = [];
+
+//Number of guesses:-
 let numGuess = 1;
+
+//playGame variable for to play the game:-
 let playGame = true;
 
-if (playGame) { 
-    submitButton.addEventListener('click',function(event){
-        event.preventDefault();
-        const guess = parseInt(userInput.value);
-        validateGuess(guess)
-    }) 
-};
+///.Lets create functions and codeLogics below:-
+
+//User is elegible for to start the game:-
+if(playGame){
+submitButton.addEventListener('click',(event)=>{
+event.preventDefault();
+const guessVal = parseInt(userInput.value);
+console.log(guessVal);
+validateGuess(guessVal);
+}) 
+}
 
 
-function validateGuess(guess){
-//condition checks:-
-if (isNaN(guess)) {
-  alert('Please enter a valid number')  
-}
-else if(guess < 1){
-    alert('Please enter a number which is greater than 1')  
-}
-else if(guess > 100){
-    alert('Please enter a number which is smaller than 100')  
-}
+let validateGuess = (guessVal)=>{
+ //To check the conditions using if/else if condtions:-
+ if(isNaN(guessVal)){
+alert('Please enter a valid number.')
+ }
+ else if(guessVal < 1){
+    alert('Please enter a number greater than 1.')
+     }
+else if(guessVal > 100){
+        alert('Please enter a number lesser than 100.')
+         }
 else{
-prevGuess.push(guess);
+prevGuess.push(guessVal);
 if(numGuess === 11){
-    displayGuess(guess);
-    displayMessage(`Game-Over,Your Random Number was ${randomNumber}`);
+    displayGuess(guessVal)
+    displayMessage(`Game-Over.Your random number was: ${randomNumber}`);
     endGame();
 }
 else{
-displayGuess(guess);
-checkGuess(guess);
+   displayGuess(guessVal);
+   checkGuess(guessVal);
 }
 }
 };
 
-function checkGuess(guess){
-    if(guess === randomNumber){
-        displayMessage(`You guessed it right`);
-        endGame();
-    }
-    else if(guess < randomNumber){
-        displayMessage(`Number is too Low`);
-    }
-    else if(guess > randomNumber){
-        displayMessage(`Number is too High`);
-    }
+
+let checkGuess = (guessVal)=>{
+if(guessVal === randomNumber){
+    displayMessage('Congratulations,You guessed it right number')
+    endGame();
+}
+else if(guessVal < randomNumber){
+displayMessage('Number is too low');
+}
+else if(guessVal > randomNumber){
+    displayMessage('Number is too high');
+}
 };
 
-function displayGuess(guess){
+//To cleanup and to clear the values:-
+let displayGuess = (guessVal)=>{
 userInput.value = "";
-guessSlot.innerHTML += `${guess}, `
+guessSlot.innerHTML += `${guessVal},`
 numGuess++;
 remainingSlot.innerHTML = `${11-numGuess}`
 };
 
-function displayMessage(message){
-lowOrHighval.innerHTML = `<h2>${message}</h2>`;
+//Interaction with DOM manipulation:-                                                                                                                               
+let displayMessage = (message)=>{
+toShowMessage.innerHTML = `<h2>${message}</h2>`
 };
 
-function endGame(){
-userInput.value = ""; //For clear the values.
-userInput.setAttribute('disabled','');
+let endGame = ()=>{
+//To clean the values:-
+//Add a paragraph
+userInput.value = "";
+userInput.setAttribute('disabled',"");
 createParagraph.classList.add('button');
-createParagraph.innerHTML = `<h2 id = "newGame">Start New Game</h2>`;
-startOver.appendChild(createParagraph);
-playGame = false; // to stop the game (falsy) value.
+createParagraph.innerHTML = `<h2 id ="newgame">StartGame</h2>`;
+resultOnParagraph.appendChild(createParagraph); 
+playGame = false;   
 newGame();
 };
 
-function newGame(){
-     newGameButton = document.querySelector('#newGame');
+
+let newGame = ()=>{
+const newGameButton = document.querySelector('#newgame');
 newGameButton.addEventListener('click',function(){
-randomNumber = parseInt(Math.random()*100 + 1);
-prevGuess = [];
-numGuess = 1;
-guessSlot.innerHTML = '';
-remainingSlot.innerHTML = `${11-numGuess}`
-userInput.removeAttribute('disabled');
-startOver.removeChild(createParagraph);
-playGame = true;
+    randomNumber = parseInt(Math.random()*100 + 1);
+    prevGuess = [];
+    numGuess = 1;
+    guessSlot.innerHTML = "";
+    remainingSlot.innerHTML = `${11-numGuess}`;
+    createParagraph.removeAttribute('disabled');
+    createParagraph.removeChild(resultOnParagraph);
+    playGame = true;
 })
 };
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///.NOTES:-
-//1.randomNumber:-
-// let randomNumber = parseInt(Math.random()*100 + 1),
-//This line generates a random floating-point number using Math.random(). 
-//The result is then multiplied by 100 to get a number between 0 and 99.9999999... (inclusive). 
-//The parseInt function is then used to convert this number into a whole integer. 
-//Finally, 1 is added to ensure the result is at least 1. 
-//This generates a random integer between 1 and 100, inclusive.
 
-//2.Selectors:
-// These lines use document.querySelector to select various elements from the HTML document.
-//These elements are identified by their CSS selectors (e.g., '#subt' for an element with the id 'subt').
+//1.Random Number Generation:-
+//let randomNumber = parseInt(Math.random()*100 + 1); 
+//generates a random number between 1 and 100 using Math.random(), and parseInt() converts it into an integer.
 
-//3.Event Listeners:
-//submitButton.addEventListener('click', function(event) {...}),]
-//This sets up an event listener that listens for a click on the submit button (#subt). 
-//When clicked, it prevents the default behavior (which is submitting a form, causing a page refresh), 
-//then it extracts the user's guess from the input field and calls validateGuess with that value.
+//2.DOM Elements:
+//const userInput, submitButton, guessSlot,remainingSlot,
+//lowOrHighVal, and resultOnParagraph are variables that store references
+//to specific elements in the HTML document.
 
-//4.validateGuess Function:
-//This function checks if the user's guess is valid (i.e., a number between 1 and 100).
-//If the guess is valid, it updates various elements on the page and checks if the game is over.
+//3.Creating Paragraph Elements:
+//const createParagraph = document.createElement('p'); 
+//creates a new paragraph element. 
+//This will be used to display messages in the game.
 
-//5.checkGuess Function:
-//This function compares the user's guess with the randomly generated number and provides feedback,
-//(whether the guess is too high, too low, or correct).
+//4.Array to Store Previous Guesses:
+//let prevGuess = []; 
+//initializes an empty array to store the user's previous guesses.
 
-//6.Display Functions:
-// displayGuess updates the display to show the user's guesses.
-// displayMessage displays a message (e.g., "Number is too High") on the page.
+//5.Number of Guesses:
+// let numGuess = 1; 
+//initializes a counter for the number of guesses the user has made.
 
-//7.endGame Function:
-// This function is called when the game ends (either because the user guessed correctly or after 10 incorrect guesses). It disables the input field, adds a "Start New Game" button, and sets playGame to false to stop further guesses.
+//6.Flag for Playing the Game:
+//let playGame = true; 
+//is a flag that indicates whether the game is in progress.
 
-//8.newGame Function:
-// This function sets up a new game when the "Start New Game" button is clicked. It generates a new random number, resets variables, clears the display, and re-enables the input field.
+//7.Event Listener for Submit Button:
+// submitButton.addEventListener('click', (event) => {...} listens for a click event on the submit button. When clicked, it triggers the game logic.
+
+//8.validateGuess Function:
+// This function checks if the user's guess is valid and within the specified range (1-100).
+
+//9.checkGuess Function:
+// Compares the user's guess to the random number and provides feedback on whether the guess is too high, too low, or correct.
+
+
+//10.displayGuess Function:
+// Updates the display to show the user's previous guesses and updates the remaining guesses count.
+
+//11.displayMessage Function:
+// Updates the display to show messages 
+//(e.g., "Number is too low", "Congratulations, You guessed it right number").
+
+//12.endGame Function:
+// Ends the game by disabling the input field, displaying a message, and providing an option to start a new game.
+
+//13.newGame Function:
+//Starts a new game by generating a new random number, resetting variables, and enabling the input field.
+
 
 ```
 ## Project Five:-
