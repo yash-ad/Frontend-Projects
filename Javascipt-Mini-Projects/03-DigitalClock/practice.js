@@ -1,0 +1,12 @@
+const clock = document.getElementById('clock');
+
+setInterval(()=>{
+    let showTime = new Date();
+    clock.innerHTML = showTime.toLocaleTimeString()
+},1000)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
