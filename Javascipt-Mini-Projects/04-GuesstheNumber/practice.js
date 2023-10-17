@@ -97,20 +97,21 @@ resultOnParagraph.appendChild(createParagraph);
 playGame = false;   
 newGame();
 };
+let newGame = () => {
+    const newGameButton = document.querySelector('#newgame');
+    newGameButton.addEventListener('click', function () {
+        randomNumber = parseInt(Math.random() * 100 + 1);
+        prevGuess = [];
+        numGuess = 1;
+        guessSlot.innerHTML = "";
+        remainingSlot.innerHTML = `${11-numGuess}`;
+        userInput.removeAttribute('disabled');
+        resultOnParagraph.removeChild(createParagraph);
+        playGame = true;
+    })
 
 
-let newGame = ()=>{
-const newGameButton = document.querySelector('#newgame');
-newGameButton.addEventListener('click',function(){
-    randomNumber = parseInt(Math.random()*100 + 1);
-    prevGuess = [];
-    numGuess = 1;
-    guessSlot.innerHTML = "";
-    remainingSlot.innerHTML = `${11-numGuess}`;
-    createParagraph.removeAttribute('disabled');
-    createParagraph.removeChild(resultOnParagraph);
-    playGame = true;
-})
+
 };
 
 
