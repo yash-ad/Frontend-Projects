@@ -59,13 +59,19 @@ resetButton.addEventListener('click',function(){
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///.NOTES:-
 //1.Variable Declarations:
-// miliSeconds, seconds, minutes, hours: These variables are used to keep track of the time components (milliseconds, seconds, minutes, and hours) of the timer. They are all initialized to zero.
-// toShowOnDisplay: This variable is used to store a reference to an HTML element with the class name "timer-display". It will be used to display the timer.
+// miliSeconds, seconds, minutes, hours: 
+//These variables are used to keep track of the time components (milliseconds, seconds, minutes, and hours) of the timer. 
+//They are all initialized to zero.
+// toShowOnDisplay: This variable is used to store a reference to an HTML element with the class name "timer-display". 
+//It will be used to display the timer.
 // startButton, stopButton, resetButton: These variables are used to store references to HTML buttons with the IDs "start-timer", "stop-timer", and "reset-timer" respectively.
 // intervalId: This variable will be used to store the ID returned by setInterval, allowing us to later clear the interval.
 
 //2.Start Button Event Listener:
-// An event listener is attached to the "startButton" element. When clicked, it checks if intervalId is not null (indicating that a timer is already running). If so, it clears the existing interval. Then, it sets a new interval with setInterval(updateTimer, 10) which calls the updateTimer function every 10 milliseconds.
+// An event listener is attached to the "startButton" element. 
+//When clicked, it checks if intervalId is not null (indicating that a timer is already running). 
+//If so, it clears the existing interval. 
+//Then, it sets a new interval with setInterval(updateTimer, 10) which calls the updateTimer function every 10 milliseconds.
 
 //3.updateTimer Function:
 // This function is called by the interval set by the start button.
