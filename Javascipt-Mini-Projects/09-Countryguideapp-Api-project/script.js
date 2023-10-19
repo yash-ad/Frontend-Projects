@@ -67,4 +67,33 @@ div class="data-wrapper">
 
 resetBtn.addEventListener('click',()=>{
     location.reload();
-})
+});
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///.NOTES:-
+
+//1.Element Selection:-
+//This code snippet selects three elements from the DOM using their IDs: search-btn, country-input, and reset-btn.
+
+//2.Event Listener (Search Button):-
+//This sets up an event listener that listens for a click event on the element with the ID search-btn. When clicked, it executes the arrow function.
+
+//3.Fetching Data:-
+//This code handles the process of making an HTTP request to the URL generated using the countryName variable. 
+//It uses the Fetch API to make a GET request.
+//It first sets up the URL using a template string and the value of countryInp.
+//It then uses .fetch() to send the GET request.
+//When a response is received, it converts it to JSON using .json(). This also returns a promise.
+//The second .then() block handles the JSON data returned from the response.
+//The .catch() block handles any errors that occur during the fetch process.
+//This block is responsible for handling the data received from the API after it has been converted to JSON.
+
+//4.Updating the DOM with Response Data:-
+//This code is updating an element in the DOM with the ID result by setting its innerHTML property. It uses a template string to create an HTML structure that will display information about the selected country.
+
+//5.Error Handling:-
+//This block handles errors that may occur during the fetch process. 
+//In this case, it checks if the countryName is empty or if the request to the API fails.
+
+//6.Event Listener (Reset Button):-
+//This sets up an event listener that listens for a click event on the element with the ID reset-btn.
+// When clicked, it reloads the page.
