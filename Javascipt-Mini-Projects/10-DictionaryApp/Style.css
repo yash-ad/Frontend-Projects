@@ -12,7 +12,7 @@ body {
 
 .container {
     background-color: #ffffff;
-    width: 80vw;
+    width: 90vmin;   
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
