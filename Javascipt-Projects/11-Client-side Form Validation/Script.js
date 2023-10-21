@@ -71,7 +71,11 @@ function validatePhone(){
 let message = document.getElementById('contact-message').value;
 let requiredCharacters = 30; //30 characters is required.
 let remainingCharacters = requiredCharacters - message.length; //left (remaining) characters while user typing - message (How much characters is left)
-
+ 
+if(message == ""){
+    messageError.innerHTML = "Message is required"
+    return false;
+ }
 if(remainingCharacters > 0){
     messageError.innerHTML = remainingCharacters + ' more characters are required';
     return false;
