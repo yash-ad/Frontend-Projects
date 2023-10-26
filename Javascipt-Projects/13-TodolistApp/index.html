@@ -10,22 +10,21 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-    <div class="App">
-<div class="Container">
+<div class="container">
+<div class="todo-app">
+    <h2>To-Do List <i class="fa-solid fa-list"></i></h2>
     <div id="Wrapper">
-        <input id="task-input" type="text" placeholder="Task To Be Done...">
+        <input id="input-box" type="text" placeholder="Add your task">
 <button id="add-btn">Add</button>
     </div>
-    <div id="task-container"> 
-        <p id="pending-tasks">
-            You have <span class="count-value">0</span> task (s) to complete.
-        </p>
-    </div>
+    <ul id="list-container"> 
+       <!-- <li class="checked">Task 1</li>
+       <li >Task 2</li>
+       <li>Task 3</li> -->
+    </ul>
 </div>
 <p id="error"></p>
     </div>
-
    <!-- Script JS file -->
    <script src="./script.js"></script> 
 </body>
