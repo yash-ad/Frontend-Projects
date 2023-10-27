@@ -99,3 +99,35 @@ showTask();
 //The `getItem()` method of `localStorage` API in javascript,
 //It allows you to retrieve the value associated with a specific key from the browser's local storage.
 
+
+// inputBox, addButton, listContainer, and showError are constants declared using const.
+// document.getElementById('input-box') retrieves an HTML element with the id attribute of 'input-box' from the DOM (Document Object Model).
+// document.getElementById('add-btn') retrieves an HTML element with the id attribute of 'add-btn'.
+// document.getElementById('list-container') retrieves an HTML element with the id attribute of 'list-container'.
+// document.getElementById('error') retrieves an HTML element with the id attribute of 'error'.
+
+// addTask is a function that gets executed when the user clicks the "Add" button (addButton).
+// It first checks if the value of inputBox is an empty string.
+// If it is empty, it displays an error message for 2 seconds using a timeout function and sets the showError element's style to be visible (block).
+// If the input is not empty, it creates a new li element (representing a list item).
+// It sets the innerHTML of the li element to the value of inputBox.
+// The li element is then appended to the listContainer.
+// It creates a span element and sets its innerHTML to "\u00d7" which represents the Unicode character U+00D7 (multiplication sign).
+// This span element is then appended to the li element.
+// Finally, it clears the input box value, and calls the saveData function
+
+
+// saveData is a function that saves the current state of the list in the browser's localStorage.
+// It uses localStorage.setItem to store the HTML content of listContainer with the key "data".
+
+
+// showTask is a function that retrieves the saved data from localStorage and displays it on the page.
+// It uses localStorage.getItem to retrieve the HTML content associated with the key "data" and sets it as the inner HTML of listContainer.
+
+// This code represents a simple to-do list application:
+// It uses JavaScript to manipulate the DOM, responding to user interactions.
+// Tasks are added by typing into an input box and clicking an "Add" button.
+// If the input is empty, it displays an error message.
+// Each task is represented as an `LI` list element with a delete button (SPAN element).
+// Tasks are saved in the browser's localStorage, so they persist even when the page is reloaded or closed.
+// When the page is loaded, the saved tasks are retrieved and displayed.
