@@ -100,12 +100,15 @@ showTask();
 //It allows you to retrieve the value associated with a specific key from the browser's local storage.
 
 
+
+//1.Variable Declarations:
 // inputBox, addButton, listContainer, and showError are constants declared using const.
 // document.getElementById('input-box') retrieves an HTML element with the id attribute of 'input-box' from the DOM (Document Object Model).
 // document.getElementById('add-btn') retrieves an HTML element with the id attribute of 'add-btn'.
 // document.getElementById('list-container') retrieves an HTML element with the id attribute of 'list-container'.
 // document.getElementById('error') retrieves an HTML element with the id attribute of 'error'.
 
+//2.Function Declarations:
 // addTask is a function that gets executed when the user clicks the "Add" button (addButton).
 // It first checks if the value of inputBox is an empty string.
 // If it is empty, it displays an error message for 2 seconds using a timeout function and sets the showError element's style to be visible (block).
@@ -117,6 +120,7 @@ showTask();
 // Finally, it clears the input box value, and calls the saveData function
 
 
+//3.More Function Declarations:
 // saveData is a function that saves the current state of the list in the browser's localStorage.
 // It uses localStorage.setItem to store the HTML content of listContainer with the key "data".
 
@@ -124,6 +128,7 @@ showTask();
 // showTask is a function that retrieves the saved data from localStorage and displays it on the page.
 // It uses localStorage.getItem to retrieve the HTML content associated with the key "data" and sets it as the inner HTML of listContainer.
 
+//4.Summary:-
 // This code represents a simple to-do list application:
 // It uses JavaScript to manipulate the DOM, responding to user interactions.
 // Tasks are added by typing into an input box and clicking an "Add" button.
