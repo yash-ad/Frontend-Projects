@@ -73,8 +73,8 @@ font-size: 20px;
 .hand i{
     position: absolute;
     background-color: var(--color);
-    width: 4px;
+    width: 5px;
     height: var(--h);
-    border-radius: 8px;
+    border-radius: 9px;
 }
 
