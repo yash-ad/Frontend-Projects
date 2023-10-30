@@ -3,7 +3,6 @@
 ## Project One:-
 ## 1.Color changer -
 ## Code solution:-
-
 ```javascript
 //1.Select all buttons from Html and holding in a variable `const`:-
 const buttons = document.querySelectorAll('.button'); //Nodelists
