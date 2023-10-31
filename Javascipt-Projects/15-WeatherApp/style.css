@@ -78,4 +78,14 @@ margin-top: 8px;
     text-transform: capitalize;
     margin-left: 8px;
   }
+
+  .error{
+    text-align:left;
+    margin-top: 10px;
+    font-size: 15px;
+    margin-left:80px;
+    display: none;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
   
