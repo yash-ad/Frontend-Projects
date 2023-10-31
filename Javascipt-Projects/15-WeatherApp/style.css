@@ -59,14 +59,19 @@ body{
     background: #7c7c7c6b;
   }
   
-  h2.temperature {
+  .temperature {
     margin: 0;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+font-size: 25px;
+margin-top: 8px;
   }
   
-  .Weather-descrp {
+  .weather-icon {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-left: 50px;
   }
   
   .description {
