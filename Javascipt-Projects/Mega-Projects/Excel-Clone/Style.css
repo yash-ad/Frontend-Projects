@@ -2,11 +2,15 @@
 *{
 box-sizing: border-box;
 }
+
+
 /* body */
 body{
     padding: 0;
     margin: 0;
 }
+
+
 /* Page-actions-container */
 .page-actions-container{
     height: 3rem;
@@ -19,21 +23,47 @@ body{
     margin: 0.5rem; /*To add space between */
     color: #f1f2f6;
 }
-/* Page-actions-container */
+
+
+/* cellprop-actions-container */
 .cellprop-actions-container{
     height: 3rem;
     background-color: lightsalmon;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
 }
-/* Page-actions-container */
+.cellprop-actions-container > *{ 
+    display: inline-block;   /* To select all the elements and apply them a display:inline-block*/
+    margin-right: 1rem;
+}
+.cellprop-actions-container > select{
+    border: none;
+    border-radius: 2px;
+    outline: none;
+}
+.font-family-property{
+padding: 0.2rem;
+
+}
+.font-size-property{
+    padding: 0.2rem;
+    
+    }
+
+
+/* formula-actions-container */
 .formula-actions-container{
     height: 3rem;
     background-color: lightblue;
 }
-/* Page-actions-container */
+
+/* sheet-actions-container */
 .sheet-actions-container{
 height: 3rem;
 background-color: lightcoral;
 }
+
 /* grid-container takes height 100vh and (minus) remaining their heights */
 .grid-container{
 height: calc(100vh - 3rem - 3rem - 3rem - 3rem);
