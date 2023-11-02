@@ -17,7 +17,7 @@ body{
     background-color: #218c74;
     display: flex; /*By-default - Column */
     align-items: flex-end; /*Vertically aligned to flex where the ends*/
-
+padding-left: 1rem;
 }
 .page-action{
     margin: 0.5rem; /*To add space between */
@@ -28,7 +28,7 @@ body{
 /* cellprop-actions-container */
 .cellprop-actions-container{
     height: 3rem;
-    background-color: lightsalmon;
+    background-color: #ecf0f1;;
     display: flex;
     align-items: center;
     padding-left: 1rem;
@@ -56,13 +56,58 @@ padding: 0.2rem;
 .formula-actions-container{
     height: 3rem;
     background-color: lightblue;
+    padding-left:1rem ;
+    display: flex;
+    align-items: center;
 }
 
+.formula-actions-container > input{
+    border: none;
+    outline: none;
+}
+.formula-actions-container > *{
+    display: inline-block;
+}
+.formula-icon{
+    height: 1.5rem;
+    width: 1.5rem;
+}
 /* sheet-actions-container */
 .sheet-actions-container{
 height: 3rem;
-background-color: lightcoral;
+display: flex;
+align-items: center;
+padding-left: 0.5rem;
+padding-right: 0.5rem;
+gap:1rem ;   /*The gaps between two elements.*/
+background-color: #ecf0f1;
 }
+.sheet-actions-container > *{
+    display: inline-block;
+}
+
+.sheets-folder-container{
+
+    height: 80%;
+    width: 5rem;
+    width: calc(100vw - 2vw );
+    display: flex;
+    align-items: center;
+}
+.sheet-add-icon{
+width: 2vw;
+}
+.sheet-folder{
+    text-decoration: underline;
+    font-weight: bold;
+    text-decoration-thickness: 3px;
+    font-size: 0.9rem;
+}
+
+
+
+
+
 
 /* grid-container takes height 100vh and (minus) remaining their heights */
 .grid-container{
