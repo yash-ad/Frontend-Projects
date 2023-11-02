@@ -1,0 +1,40 @@
+/* By defualt styling */
+*{
+box-sizing: border-box;
+}
+/* body */
+body{
+    padding: 0;
+    margin: 0;
+}
+/* Page-actions-container */
+.page-actions-container{
+    height: 3rem;
+    background-color: #218c74;
+    display: flex; /*By-default - Column */
+    align-items: flex-end; /*Vertically aligned to flex where the ends*/
+
+}
+.page-action{
+    margin: 0.5rem; /*To add space between */
+    color: #f1f2f6;
+}
+/* Page-actions-container */
+.cellprop-actions-container{
+    height: 3rem;
+    background-color: lightsalmon;
+}
+/* Page-actions-container */
+.formula-actions-container{
+    height: 3rem;
+    background-color: lightblue;
+}
+/* Page-actions-container */
+.sheet-actions-container{
+height: 3rem;
+background-color: lightcoral;
+}
+/* grid-container takes height 100vh and (minus) remaining their heights */
+.grid-container{
+height: calc(100vh - 3rem - 3rem - 3rem - 3rem);
+}
