@@ -131,7 +131,7 @@ position: relative;
 .address-col-cont{
     height: 10rem;
     width: 2rem;
-    background-color: salmon;
+    /* background-color: salmon; */
 }
 
 .address-row-cont{
