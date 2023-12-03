@@ -117,11 +117,33 @@ width: 2vw;
 }
 
 
-
-
-
-
-/* grid-container takes height 100vh and (minus) remaining their heights */
 .grid-container{
-height: calc(100vh - 3rem - 3rem - 2rem - 3rem);
+height: calc(100vh - 3rem - 3rem - 2rem - 3rem);/* grid-container takes height 100vh and (minus) remaining their heights */
+position: relative;
+}
+
+.top-left-dummy{
+    height: 2rem;
+    width: 2rem;
+    background-color: teal;
+}
+
+.address-col-cont{
+    height: 10rem;
+    width: 2rem;
+    background-color: salmon;
+}
+
+.address-row-cont{
+  height: 2rem;
+  /* background-color: lightslategray; */
+}
+
+.cells-cont{
+position: absolute;
+width: 10rem;
+height: 10rem;
+/* background-color: saddlebrown; */
+top: 0;
+left: 2rem;
 }
