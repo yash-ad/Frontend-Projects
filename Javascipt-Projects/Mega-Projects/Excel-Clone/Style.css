@@ -120,30 +120,67 @@ width: 2vw;
 .grid-container{
 height: calc(100vh - 3rem - 3rem - 2rem - 3rem);/* grid-container takes height 100vh and (minus) remaining their heights */
 position: relative;
+overflow: auto;
+background-color: #ecf0f1;
 }
 
-.top-left-dummy{
+.top-left-dummy-box{
     height: 2rem;
     width: 2rem;
-    background-color: teal;
+    background-color:#747dBc;
+    position: fixed;
+    z-index: 1;
 }
 
 .address-col-cont{
-    height: 10rem;
-    width: 2rem;
-    /* background-color: salmon; */
+    /* height: 10rem;
+    width: 2rem; */
+    position: sticky;
+    top: 2rem;
+    left: 0;
+  
 }
 
 .address-row-cont{
-  height: 2rem;
   /* background-color: lightslategray; */
+  display: flex;
+  position: sticky;
+  top: 0;
+  left: 2rem;
 }
 
 .cells-cont{
 position: absolute;
-width: 10rem;
-height: 10rem;
 /* background-color: saddlebrown; */
 top: 0;
 left: 2rem;
+}
+
+.address-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid #dfe4ea;
+   
+}
+.address-row{
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid #dfe4ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.cols-cont{
+
+  display: flex; 
+ 
+}
+.cell{
+    height: 2rem;
+    width: 5rem;
+    border:1px solid #dfe4ea;
 }
