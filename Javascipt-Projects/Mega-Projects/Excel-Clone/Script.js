@@ -31,13 +31,18 @@ for(let i = 0; i < cols; i++){
   for(let j = 0; j < rows; j++){
 let cell = document.createElement('div');
 cell.setAttribute('class','cell');
+cell.setAttribute('contenteditable','true');
 colsCont.appendChild(cell);
-editTheAddressBar(cell,i,j);
+displayAddressBar(cell,i,j);
   }
 cellsCont.appendChild(colsCont);
 }
 
 
-function editTheAddressBar(cell,i,j){
-
-}
+function displayAddressBar(cell,i,j){
+    cell.addEventListener('click',(e)=>{
+let colId = i + 1;
+let rowId = String.fromCharCode(65 + j);
+addressBar.value = `${rowId}${colId}`
+    })
+};

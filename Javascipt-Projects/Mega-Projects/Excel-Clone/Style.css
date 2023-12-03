@@ -19,6 +19,7 @@ body{
     align-items: flex-end; /*Vertically aligned to flex where the ends*/
 padding-left: 1rem;
 }
+
 .page-action{
     margin: 0.5rem; /*To add space between */
     color: #f1f2f6;
@@ -76,6 +77,8 @@ padding: 0.2rem;
 }
 .address-bar{
     width: 5rem;
+    text-align: center;
+  
 }
 
 .formula-bar{
@@ -116,7 +119,7 @@ width: 2vw;
     font-size: 0.9rem;
 }
 
-
+/* grid-container */
 .grid-container{
 height: calc(100vh - 3rem - 3rem - 2rem - 3rem);/* grid-container takes height 100vh and (minus) remaining their heights */
 position: relative;
@@ -183,4 +186,5 @@ left: 2rem;
     height: 2rem;
     width: 5rem;
     border:1px solid #dfe4ea;
+    outline: none;
 }
