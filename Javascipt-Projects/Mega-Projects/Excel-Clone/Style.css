@@ -54,8 +54,8 @@ padding: 0.2rem;
 
 /* formula-actions-container */
 .formula-actions-container{
-    height: 3rem;
-    background-color: lightblue;
+    height: 2rem;
+    background-color: #ecf0f1;;
     padding-left:1rem ;
     display: flex;
     align-items: center;
@@ -64,14 +64,26 @@ padding: 0.2rem;
 .formula-actions-container > input{
     border: none;
     outline: none;
+    height: 70%;
 }
 .formula-actions-container > *{
     display: inline-block;
+    margin-right: 0.7rem;
 }
 .formula-icon{
     height: 1.5rem;
     width: 1.5rem;
 }
+.address-bar{
+    width: 5rem;
+}
+
+.formula-bar{
+    width: calc(100vw - 5rem - 0.7rem - 0.7rem - 0.7rem);
+}
+
+
+
 /* sheet-actions-container */
 .sheet-actions-container{
 height: 3rem;
@@ -111,5 +123,5 @@ width: 2vw;
 
 /* grid-container takes height 100vh and (minus) remaining their heights */
 .grid-container{
-height: calc(100vh - 3rem - 3rem - 3rem - 3rem);
+height: calc(100vh - 3rem - 3rem - 2rem - 3rem);
 }
