@@ -1,5 +1,5 @@
 //1.Element Selection:-
-const url = "https://api.dictionaryapi.dev/api/v2/entries/en/"; //API url
+const url = 'https://api.api-ninjas.com/v1/dictionary?word='; //API url
 const toShowResult = document.getElementById('result');
 const searchBtn = document.getElementById('search-btn');
 
