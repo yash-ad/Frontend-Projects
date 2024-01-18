@@ -22,7 +22,7 @@
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    box-shadow: 0 1.25rem 1.8rem rgba(226, 226, 226, 0.25);
+    box-shadow: 0 0.75rem 0.75rem 0.75rem rgba(247, 246, 246, 0.25);
     /* border: #e5e5e7; */
   }
   .title{
@@ -73,6 +73,10 @@ margin-bottom: 25px;
     letter-spacing: 2px;
     margin-bottom: 1.8em;
   }
+  .wrapper{
+    display: flex;
+    justify-content: center;
+  }
   .data-wrapper {
     margin-bottom: 1em;
     letter-spacing: 0.3px;
@@ -83,11 +87,11 @@ margin-bottom: 25px;
     color: #ffffff;
   }
   .container span {
-    color: #babbbf;
+    color: #d0d0d0;
   }
   .container h3 {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: 400;
     color: #ff465a;
   }
