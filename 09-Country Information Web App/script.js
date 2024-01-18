@@ -1,9 +1,9 @@
 let searchBtn = document.getElementById('search-btn');
 let countryInp = document.getElementById('country-input');
 let resetBtn = document.getElementById('reset-btn');
-let result = document.getElementById('result'); // Assuming result is the ID of the element you want to update
+let result = document.getElementById('result'); 
 
-searchBtn.addEventListener('click', () => {
+searchBtn.addEventListener('click',() => {
     let countryName = countryInp.value;
     let finalURL = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`;
 
@@ -48,7 +48,7 @@ searchBtn.addEventListener('click', () => {
             `;
         })
         .catch(() => {
-            if (countryName.length == "") {
+            if (countryName.length === "") {
                 result.innerHTML = `<h3>The input field cannot be empty</h3>`;
             } else {
                 result.innerHTML = `<h3>Please enter a valid country name.</h3>`;
